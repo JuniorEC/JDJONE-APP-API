@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "652606516513",
+    "firebase_url": "https://jdjone-54e21.firebaseio.com",
+    "project_id": "jdjone-54e21",
+    "storage_bucket": "jdjone-54e21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:652606516513:android:46b05ca76c63cc26",
+        "android_client_info": {
+          "package_name": "br.com.joaodjunior.jdjone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "652606516513-2sn6f8e0rqfiemgb4gp5smdpck0nktbp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsP_22gFSgPrXojUyfDMq7sZ4XWkmjky0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

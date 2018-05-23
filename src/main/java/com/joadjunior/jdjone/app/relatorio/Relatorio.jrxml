@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-23T10:13:10 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ace25ecc-5a34-4bdb-9225-12e6ce0642a3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="adquirencia" class="java.util.List">
+		<fieldDescription><![CDATA[adquirencia]]></fieldDescription>
+	</field>
+	<field name="aprovadas" class="java.util.List">
+		<fieldDescription><![CDATA[aprovadas]]></fieldDescription>
+	</field>
+	<field name="cartao" class="java.util.List">
+		<fieldDescription><![CDATA[cartao]]></fieldDescription>
+	</field>
+	<field name="contas" class="java.util.List">
+		<fieldDescription><![CDATA[contas]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="faturamentos" class="java.util.List">
+		<fieldDescription><![CDATA[faturamentos]]></fieldDescription>
+	</field>
+	<field name="inadimplencia" class="com.joadjunior.jdjone.app.relatorio.model.Inadimplencia">
+		<fieldDescription><![CDATA[inadimplencia]]></fieldDescription>
+	</field>
+	<field name="periodo" class="java.lang.String">
+		<fieldDescription><![CDATA[periodo]]></fieldDescription>
+	</field>
+	<field name="recuperacao" class="java.util.List">
+		<fieldDescription><![CDATA[recuperacao]]></fieldDescription>
+	</field>
+	<field name="representante" class="com.joadjunior.jdjone.app.relatorio.model.Representante">
+		<fieldDescription><![CDATA[representante]]></fieldDescription>
+	</field>
+	<field name="seguro" class="java.util.List">
+		<fieldDescription><![CDATA[seguro]]></fieldDescription>
+	</field>
+	<field name="statusLoja" class="java.util.List">
+		<fieldDescription><![CDATA[statusLoja]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47">
+			<staticText>
+				<reportElement x="200" y="11" width="170" height="30" uuid="13e28e50-4d9d-46e1-ae36-d854f2f18bf1"/>
+				<text><![CDATA[APRESENTAÇÃO DE RESULTADOS]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="10" y="8" width="100" height="30" uuid="4b1b6c1d-1b21-40ec-8067-935e5104fda0"/>
+				<textFieldExpression><![CDATA[$F{periodo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="108">
+			<staticText>
+				<reportElement x="10" y="10" width="100" height="20" uuid="0eab5e6c-c24c-43c7-aa4e-cbe424aea516"/>
+				<text><![CDATA[GRUPO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="30" width="100" height="20" uuid="c0246e89-f882-49d6-9eba-a60105dde0ab"/>
+				<text><![CDATA[GRC TRICARD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="50" width="100" height="20" uuid="d9c32ab4-bd21-4dc4-9db1-9052355cc6ab"/>
+				<text><![CDATA[GA TRICARD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="70" width="100" height="20" uuid="3f78fbba-e3c1-4622-882a-f172627f9f70"/>
+				<text><![CDATA[GC TRIBANCO:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="10" width="220" height="20" uuid="c6d485af-89ea-401e-ac9e-01c5ac7ddfe4"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getRazaoSocial()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="30" width="220" height="20" uuid="4c98ba12-78ce-4e6a-810f-404855923a81"/>
+				<textFieldExpression><![CDATA[$F{representante}.getGrc()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="50" width="220" height="20" uuid="92af3e67-548d-4593-a051-c17790278142"/>
+				<textFieldExpression><![CDATA[$F{representante}.getGa()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="70" width="220" height="20" uuid="e6754b55-ed63-4e12-879a-692f567d702c"/>
+				<textFieldExpression><![CDATA[$F{representante}.getGc()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="50" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="60" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="554" height="60" uuid="c2f8cb85-e731-4990-a334-11b00b7bab46"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{faturamentos})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Faturamento.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="56">
+			<subreport>
+				<reportElement x="0" y="10" width="554" height="36" uuid="0c6521f9-cea1-43a1-9248-d9765fddb4da"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{aprovadas})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Aprovadas.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="60">
+			<subreport>
+				<reportElement x="0" y="17" width="554" height="43" uuid="6a8300c3-8510-45d3-b2fc-d392361065e0"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{contas})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Contas.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="60">
+			<subreport>
+				<reportElement x="0" y="17" width="554" height="43" uuid="cad43a20-1632-4178-8ea8-6b0fc2680e61"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{adquirencia})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Adquirencia.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="50">
+			<subreport>
+				<reportElement x="0" y="10" width="554" height="40" uuid="ecb5a00f-38e9-4bb5-809f-dc5c03ff19bd"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{contas})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["Cartao.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+		<band height="70">
+			<subreport>
+				<reportElement x="0" y="21" width="554" height="49" uuid="4376326c-8266-4116-b18e-d9da101a9cc1"/>
+				<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{statusLoja})]]></dataSourceExpression>
+				<subreportExpression><![CDATA["StatusLoja.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>
