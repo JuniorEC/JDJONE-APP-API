@@ -14,7 +14,7 @@ import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 public class Relatorio {
 	
-private String path; //Caminho base
+	private String path; //Caminho base
 	
 	private String pathToReportPackage; // Caminho para o package onde est�o armazenados os relatorios Jarper
 	

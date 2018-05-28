@@ -3,10 +3,8 @@ package com.joadjunior.jdjone.app.dao;
 import java.io.IOException;
 import java.util.List;
 
-import com.joadjunior.jdjone.app.relatorio.model.Analitico;
-import com.joadjunior.jdjone.app.relatorio.model.Empresa;
 import com.joadjunior.jdjone.app.repository.AnaliticoRepository;
-import com.joadjunior.jdjone.app.repository.EmpresaRepository;
+import com.joadjunior.jdjone.report.model.Analitico;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;

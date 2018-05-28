@@ -2,7 +2,7 @@ package com.joadjunior.jdjone.app.repository;
 
 import java.util.List;
 
-import com.joadjunior.jdjone.app.relatorio.model.Analitico;
+import com.joadjunior.jdjone.report.model.Analitico;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
