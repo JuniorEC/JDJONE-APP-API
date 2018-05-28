@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-23T10:02:12 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="StatusLoja" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f70f2fc1-9ec1-44cb-9035-d4eedeb8261e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="aprovando" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[aprovando]]></fieldDescription>
+	</field>
+	<field name="ativa" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[ativa]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="operando" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[operando]]></fieldDescription>
+	</field>
+	<field name="positiva" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[positiva]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="20" width="100" height="30" uuid="9ab10f7f-3e0a-4a85-9a78-bea00520df63"/>
+				<text><![CDATA[STATUS LOJA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="3003ea9f-95f3-41b3-b3f9-d6c57972381b"/>
+				<text><![CDATA[CNPJ(S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="90" height="30" uuid="a621cec1-9f83-45f1-85c8-5f7d9cfde128"/>
+				<text><![CDATA[NOME FANTASIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="394" height="30" uuid="374d656f-d0c8-4b51-94c7-fbd003da342f"/>
+				<text><![CDATA[DESCRICAO]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="30" uuid="86525d81-02ff-4333-bf84-ff359451baaa"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="90" height="30" uuid="6ce8bd5e-e236-4eaf-a2c7-ef808d39cebe"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getNomeFantasia()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="100" height="30" uuid="a9c87d17-1a5d-4a78-b562-8fc38e545309"/>
+				<textFieldExpression><![CDATA[$F{operando}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="30" uuid="daddb5f7-f435-4639-aea6-9f7ef1809792"/>
+				<textFieldExpression><![CDATA[$F{aprovando}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="30" uuid="4b68ec2b-c119-47ba-be5e-db385c8e9d26"/>
+				<textFieldExpression><![CDATA[$F{positiva}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="0" width="65" height="30" uuid="ff8fec7b-9bd1-4cf5-ab19-dea4e9802a29"/>
+				<textFieldExpression><![CDATA[$F{ativa}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

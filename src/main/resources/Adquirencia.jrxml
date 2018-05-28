@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-23T09:52:26 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Adquirencia" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="21b68c65-64f7-4ab1-8f80-309098a9c8e2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="cieloTotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[cieloTotal]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="martins" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[martins]]></fieldDescription>
+	</field>
+	<field name="master" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[master]]></fieldDescription>
+	</field>
+	<field name="redeTotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[redeTotal]]></fieldDescription>
+	</field>
+	<field name="taxaCredito" class="java.lang.Double">
+		<fieldDescription><![CDATA[taxaCredito]]></fieldDescription>
+	</field>
+	<field name="taxaDebito" class="java.lang.Double">
+		<fieldDescription><![CDATA[taxaDebito]]></fieldDescription>
+	</field>
+	<field name="taxaSeisX" class="java.lang.Double">
+		<fieldDescription><![CDATA[taxaSeisX]]></fieldDescription>
+	</field>
+	<field name="visa" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[visa]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="30" uuid="0f652db8-25dd-4541-96d6-c3716a695b31"/>
+				<text><![CDATA[ADQUIRÊNCIA]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="30" uuid="3f1fa51f-1bff-464c-af08-8ba4ebca159b"/>
+				<text><![CDATA[CNPJ(S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="90" height="30" uuid="db1d95d0-ae87-49e5-b696-582e079f7afb"/>
+				<text><![CDATA[NOME FANTASIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="40" height="30" uuid="c1965623-c3f2-45ff-896a-87737a3a0dc5"/>
+				<text><![CDATA[CIELO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="0" width="40" height="30" uuid="79251465-0541-4f7b-9f87-e1c85b529f50"/>
+				<text><![CDATA[REDE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="40" height="30" uuid="9c436a78-24dc-42c2-b911-9c5caef91307"/>
+				<text><![CDATA[TAXA DÉBITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="300" y="0" width="50" height="30" uuid="6aa781a7-fcc3-414d-80ac-7a8155dde786"/>
+				<text><![CDATA[TAXA CRÉDITO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="40" height="30" uuid="25a58bfe-02a3-4738-8892-25221e4c230c"/>
+				<text><![CDATA[TAXA ATÉ 6X]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="50" height="30" uuid="518e3525-0c96-413b-b09c-909346517401"/>
+				<text><![CDATA[MASTER]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="0" width="30" height="30" uuid="f5a2d41c-0099-43e9-96cc-c03d47f992cf"/>
+				<text><![CDATA[VISA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="0" width="44" height="30" uuid="eb4f4e2c-d948-4a4f-9237-e3f78f957f74"/>
+				<text><![CDATA[TEF Martins]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="40" height="30" uuid="f3687236-de7c-4980-900b-eb9b43f76fa9"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="0" width="90" height="30" uuid="74b54b30-cfb0-470e-b8d1-c4597510022b"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getNomeFantasia()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="0" width="40" height="30" uuid="f40c8675-367d-4ba8-91e5-360340fc90dd"/>
+				<textFieldExpression><![CDATA[$F{cieloTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="200" y="0" width="40" height="30" uuid="3084b14e-b357-4ae8-ba81-e50b54bc452e"/>
+				<textFieldExpression><![CDATA[$F{redeTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="40" height="30" uuid="046a4da6-96e8-4f71-a0da-5a7d68faba61"/>
+				<textFieldExpression><![CDATA[$F{taxaDebito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="300" y="0" width="50" height="30" uuid="45a9138b-39a6-424c-9903-72d8cc621954"/>
+				<textFieldExpression><![CDATA[$F{taxaCredito}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="40" height="30" uuid="199cc82a-b7f2-4c91-822b-777b1d6635f2"/>
+				<textFieldExpression><![CDATA[$F{taxaSeisX}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="50" height="30" uuid="44819faf-0434-4b69-b99c-6f14ccada6a7"/>
+				<textFieldExpression><![CDATA[$F{master}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="0" width="30" height="30" uuid="7bbb71c9-ab21-40f6-946b-50f6cab664c1"/>
+				<textFieldExpression><![CDATA[$F{visa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="44" height="30" uuid="49024be1-109c-4c72-8984-0929019a8465"/>
+				<textFieldExpression><![CDATA[$F{martins}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="50" y="7" width="90" height="30" uuid="f6fd51ea-9c14-45b9-81fc-a831c2d50d87"/>
+				<text><![CDATA[Total Geral]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

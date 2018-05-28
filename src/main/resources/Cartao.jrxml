@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-23T09:57:38 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Cartao" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d294ed86-37fa-46ce-96bd-08af0ec12523">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="ativo" class="java.lang.Boolean">
+		<fieldDescription><![CDATA[ativo]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="faturamento" class="com.joadjunior.jdjone.app.relatorio.model.Faturamento">
+		<fieldDescription><![CDATA[faturamento]]></fieldDescription>
+	</field>
+	<field name="status" class="java.lang.String">
+		<fieldDescription><![CDATA[status]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="30" uuid="1d99de18-89ef-4394-919f-79ea1ab380d4"/>
+				<text><![CDATA[CARTÃO PJ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="d0668f87-77b0-4fc3-8ec1-f8d1f4ffe7cc"/>
+				<text><![CDATA[CNPJ(S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="90" height="30" uuid="e828ab1d-54ee-4d55-8914-9f0f32929f34"/>
+				<text><![CDATA[NOME FANTASIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="0" width="100" height="30" uuid="39e3f206-df91-4894-b1e8-7881d87dc7c0"/>
+				<text><![CDATA[STATUS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="0" width="100" height="30" uuid="93873204-0126-4d47-b854-9172b0de811f"/>
+				<text><![CDATA[FATURAMENTO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="0" width="100" height="30" uuid="83813db3-9da2-484c-9415-e150496fc5c7"/>
+				<text><![CDATA[ATIVO NO MÊS]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="50" height="20" uuid="cb4fe610-f874-4ef7-89b2-c6f542219f64"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="90" height="20" uuid="14a4f9d6-ecb0-4dc3-a50e-7d5a8438d1a6"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getNomeFantasia()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="0" width="100" height="20" uuid="d5c878b7-5742-454c-aef0-20de3a36a19a"/>
+				<textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="20" uuid="bbc35d6e-546e-47d4-9461-d6a617e645b5"/>
+				<textFieldExpression><![CDATA[$F{faturamento}.getFaturamentoTotal()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="100" height="20" uuid="10997c75-71a3-42c9-ab79-d357928cad64"/>
+				<textFieldExpression><![CDATA[$F{ativo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+</jasperReport>

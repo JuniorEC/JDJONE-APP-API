@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-25T13:51:50 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Aprovadas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e4f0a878-aed4-48f1-9709-c401da76dd1f">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="b89e2af5-8676-4a91-b2dc-0364bde6c79b">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="aprovDeltaAno" class="java.lang.Double">
+		<fieldDescription><![CDATA[aprovDeltaAno]]></fieldDescription>
+	</field>
+	<field name="aprovadas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[aprovadas]]></fieldDescription>
+	</field>
+	<field name="aprovadasDefinitivo" class="java.lang.Integer">
+		<fieldDescription><![CDATA[aprovadasDefinitivo]]></fieldDescription>
+	</field>
+	<field name="comCompra" class="java.lang.Integer">
+		<fieldDescription><![CDATA[comCompra]]></fieldDescription>
+	</field>
+	<field name="compraDeltaAno" class="java.lang.Double">
+		<fieldDescription><![CDATA[compraDeltaAno]]></fieldDescription>
+	</field>
+	<field name="emitidas" class="java.lang.Integer">
+		<fieldDescription><![CDATA[emitidas]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="limiteDefinitivo" class="java.lang.Double">
+		<fieldDescription><![CDATA[limiteDefinitivo]]></fieldDescription>
+	</field>
+	<field name="percEmitidas" class="java.lang.Double">
+		<fieldDescription><![CDATA[percEmitidas]]></fieldDescription>
+	</field>
+	<field name="propostasPendentes" class="java.lang.Integer">
+		<fieldDescription><![CDATA[propostasPendentes]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="251" y="24" width="53" height="30" uuid="1a37077d-5ac1-475f-a712-9fd9fb2c51fd"/>
+				<text><![CDATA[Aprovadas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="30" uuid="77d65190-f913-4998-abbf-b88e27ed9f62"/>
+				<text><![CDATA[CNPJ(S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="50" y="0" width="50" height="30" uuid="a778a179-52df-425b-88a7-ca82610b0847"/>
+				<text><![CDATA[EMITIDAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="0" width="70" height="30" uuid="e39adfd9-90b6-4475-bd0e-6d92416222fb"/>
+				<text><![CDATA[APROVADAS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="190" y="0" width="50" height="30" uuid="694a951f-3fdf-4f62-aa86-9d8f2a207de5"/>
+				<text><![CDATA[Aprov. L. definitivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="50" height="30" uuid="084ef528-0156-48d8-8269-6cfd0cd8539f"/>
+				<text><![CDATA[Propostas Pendentes]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="50" height="30" uuid="a79ef8d1-f90e-4b48-9298-e5c8f595b27b"/>
+				<text><![CDATA[Com Compra]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="50" height="30" uuid="af66f461-3024-464b-84f4-806f10b0ab1a"/>
+				<text><![CDATA[% Limite Definitivo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="40" height="30" uuid="6253323c-147e-4352-a793-a2ce80059c38"/>
+				<text><![CDATA[Emitidas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="30" height="30" uuid="21c640fb-2b3d-4549-a7c2-883e1c5d23ce"/>
+				<text><![CDATA[APRO. %]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="520" y="0" width="34" height="30" uuid="921bdffa-4758-4d16-abdd-ecb077330f26"/>
+				<text><![CDATA[Static Text]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="10" width="40" height="20" uuid="e45eff80-5ae0-4d92-bb7d-67014daf3441"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="50" y="10" width="50" height="20" uuid="4ceb4a96-88de-459e-b4dd-c8bd5cf010b9"/>
+				<textFieldExpression><![CDATA[$F{emitidas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="10" width="70" height="20" uuid="7167770e-8d1c-4382-8c1f-27565a4cd1e8"/>
+				<textFieldExpression><![CDATA[$F{aprovadas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="190" y="10" width="50" height="20" uuid="afb56cae-25e5-4497-bcf4-a7f425e6559b"/>
+				<textFieldExpression><![CDATA[$F{aprovadasDefinitivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="251" y="10" width="49" height="20" uuid="f03afb4e-7e9f-4872-a5f4-101a8e9c2fc1"/>
+				<textFieldExpression><![CDATA[$F{comCompra}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="10" width="50" height="20" uuid="650d0414-c3a7-4cc0-8c3d-15a48174e824"/>
+				<textFieldExpression><![CDATA[$F{propostasPendentes}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="10" width="50" height="20" uuid="d21a50a7-1024-4e8a-9b94-b313b5b60163"/>
+				<textFieldExpression><![CDATA[$F{limiteDefinitivo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="10" width="40" height="20" uuid="6f6b7d3c-e2fe-4f67-8749-95c4865317fb"/>
+				<textFieldExpression><![CDATA[$F{percEmitidas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="480" y="10" width="30" height="20" uuid="d4fc6a62-ecec-4cb5-af88-d6a1b8000ca0"/>
+				<textFieldExpression><![CDATA[$F{aprovDeltaAno}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="520" y="10" width="35" height="20" uuid="6386331c-7352-4f5a-8623-fc8c84d54410"/>
+				<textFieldExpression><![CDATA[$F{compraDeltaAno}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="50" height="30" uuid="0c9a8183-d3d2-48d6-aa32-74a9d5a317cf"/>
+				<text><![CDATA[Total geral]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

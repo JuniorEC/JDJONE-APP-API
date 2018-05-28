@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-25T13:46:10 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Faturamento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f79f9f21-51ae-4b15-ba4c-9833477651ec">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="delta" class="java.lang.Double">
+		<fieldDescription><![CDATA[delta]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<field name="faturamentoTotal" class="java.lang.Double">
+		<fieldDescription><![CDATA[faturamentoTotal]]></fieldDescription>
+	</field>
+	<field name="hib" class="java.lang.Double">
+		<fieldDescription><![CDATA[hib]]></fieldDescription>
+	</field>
+	<field name="percFatHib" class="java.lang.Double">
+		<fieldDescription><![CDATA[percFatHib]]></fieldDescription>
+	</field>
+	<field name="percFatPl" class="java.lang.Double">
+		<fieldDescription><![CDATA[percFatPl]]></fieldDescription>
+	</field>
+	<field name="pl" class="java.lang.Double">
+		<fieldDescription><![CDATA[pl]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="25" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="25" backcolor="#DDEAF0" uuid="82564bfa-a870-44cd-9ebe-d7b8fd8420c9"/>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#2FB3FA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="222" y="4" width="110" height="17" uuid="47ab6b9e-3b3d-4538-9ddb-a819e0e598d1"/>
+				<textElement textAlignment="Center">
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FATURAMENTO]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="0" width="554" height="20" backcolor="#BABABA" uuid="6d726fc8-a601-435f-9a9e-7c0a5d335562">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineStyle="Solid" lineColor="#2FB3FA"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="5" width="50" height="11" uuid="a0079d12-e7f9-437b-8071-31f7ead539b2">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[CNPJ(S)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="5" width="110" height="11" uuid="b5e4c7f2-1d82-4146-9694-8175eb924ba8">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[NOME FANTASIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="6" width="46" height="11" uuid="9e55d491-98ae-465b-901f-ffa136dbc095">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[PL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="319" y="6" width="51" height="11" uuid="552d6236-3661-4981-9270-7d640e7f9868">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[HIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="6" width="50" height="11" uuid="e7b3821b-2afb-466b-906a-9a46c48ffa32">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[% FAT. PL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="6" width="60" height="11" uuid="219fca3d-e0a0-4126-8f9b-8dd3a92ad4bc">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[% FAT. HIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="510" y="6" width="40" height="11" uuid="c6440461-25a5-4cd8-9304-98fcc4ef75fb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[%∆ ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="180" y="6" width="70" height="11" uuid="e419388e-d999-4390-8c47-634f49f3e50b">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="51" height="11" uuid="7f9f9cdc-aa72-4c43-8bf0-5748d7a27f95">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="0" width="110" height="11" uuid="349eb729-fbc9-4129-957b-e6fc65d35c81">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}.getNomeFantasia()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="70" height="11" uuid="a0932857-80a8-4ebc-b171-a1cf9ebd7e34">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{faturamentoTotal}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="260" y="0" width="46" height="11" uuid="3575498a-fa63-4118-8866-74477c0c6638">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{pl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="320" y="0" width="50" height="11" uuid="6358b048-6f1a-489b-9ab0-e2e84cd385f0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{hib}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="0" width="50" height="11" uuid="4f2688fe-28e7-46a6-a27c-9cd73af1a346">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{percFatPl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="440" y="0" width="60" height="11" uuid="dbe4cdc1-23cd-4288-b648-a80545e26d2f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{percFatHib}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="0" width="40" height="11" uuid="15b8e8c4-1745-41b3-a1b9-81ca18469e37">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{delta}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="11" splitType="Stretch">
+			<staticText>
+				<reportElement x="60" y="0" width="90" height="11" uuid="f95fdd44-88e5-40b7-a3ed-6473181dd99a">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="8"/>
+				</textElement>
+				<text><![CDATA[Total Geral]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>

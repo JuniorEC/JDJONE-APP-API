@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 5.6.2.final using JasperReports Library version 5.6.1  -->
+<!-- 2018-05-23T09:43:32 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Contas" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68780be0-99be-4793-b363-58e49ee7c89e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="contasAptasHib" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasAptasHib]]></fieldDescription>
+	</field>
+	<field name="contasAptasPl" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasAptasPl]]></fieldDescription>
+	</field>
+	<field name="contasInativasHib" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasInativasHib]]></fieldDescription>
+	</field>
+	<field name="contasInativasPl" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasInativasPl]]></fieldDescription>
+	</field>
+	<field name="contasUsoHib" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasUsoHib]]></fieldDescription>
+	</field>
+	<field name="contasUsoPl" class="java.lang.Integer">
+		<fieldDescription><![CDATA[contasUsoPl]]></fieldDescription>
+	</field>
+	<field name="empresa" class="com.joadjunior.jdjone.app.relatorio.model.Empresa">
+		<fieldDescription><![CDATA[empresa]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="227" y="0" width="100" height="30" uuid="1c3f7f7b-21a1-4096-b798-6e95e4bd756c"/>
+				<text><![CDATA[Contas]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="90" splitType="Stretch">
+			<staticText>
+				<reportElement x="-1" y="0" width="61" height="30" uuid="53dd6b43-2301-4c5f-9483-37845e05a8ed"/>
+				<text><![CDATA[CNPJ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="0" width="90" height="30" uuid="8408efc2-147d-409a-b51f-4f63eb93976f"/>
+				<text><![CDATA[NOME FANTASIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="57" height="30" uuid="9fef7926-4600-4dae-9131-979184b69a43"/>
+				<text><![CDATA[CONTAS APTAS PL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="0" width="60" height="30" uuid="80a638b1-3efb-46b6-9a64-3389fe44392b"/>
+				<text><![CDATA[CONTAS COM USO PL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="0" width="50" height="30" uuid="c3933c50-14ef-4fe0-87e7-00a457a657af"/>
+				<text><![CDATA[CONTAS INATIVAS PL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="50" height="30" uuid="65b6fa36-188f-4edf-b605-90b98b5fd82e"/>
+				<text><![CDATA[CONTAS APTAS HIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="50" height="30" uuid="626c7bdd-bbe6-42e4-828f-858bdf8a7721"/>
+				<text><![CDATA[CONTAS COM USO HIB]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="490" y="0" width="64" height="30" uuid="2ca4ff54-98b3-4b3a-98e6-a39297fca8b6"/>
+				<text><![CDATA[CONTAS INATIVAS HIB]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement x="-1" y="0" width="61" height="20" uuid="1f74bff7-bf43-4000-a495-11900cbe9198"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getCnpj()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="70" y="0" width="90" height="20" uuid="d740e840-f68e-4890-a8b8-7c28233800b2"/>
+				<textFieldExpression><![CDATA[$F{empresa}.getNomeFantasia()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="57" height="20" uuid="d55a4813-0f53-428b-b306-ff05e6dd1b5c"/>
+				<textFieldExpression><![CDATA[$F{contasAptasPl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="240" y="0" width="60" height="20" uuid="8d6a4d39-41eb-4182-b69b-488c8130f5b2"/>
+				<textFieldExpression><![CDATA[$F{contasUsoPl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="0" width="50" height="20" uuid="7d65db48-bdf8-4681-bcc5-08da7e404d37"/>
+				<textFieldExpression><![CDATA[$F{contasInativasPl}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="50" height="20" uuid="45663cd5-100c-435a-bd3f-b5bcc8ed1a1d"/>
+				<textFieldExpression><![CDATA[$F{contasAptasHib}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="0" width="50" height="20" uuid="936ac3b5-0b60-486f-83cf-c7674d437d0c"/>
+				<textFieldExpression><![CDATA[$F{contasUsoHib}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="490" y="0" width="64" height="20" uuid="f9d291d8-9e48-44f6-8b73-ee6c17531b83"/>
+				<textFieldExpression><![CDATA[$F{contasInativasHib}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="48" splitType="Stretch">
+			<staticText>
+				<reportElement x="70" y="10" width="90" height="30" uuid="5b5b013f-96f9-44ca-81cb-d106017a4295"/>
+				<text><![CDATA[Total Geral]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+</jasperReport>
